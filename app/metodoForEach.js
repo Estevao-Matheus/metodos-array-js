@@ -3,9 +3,10 @@ const elementoLivros = document.getElementById('livros');
 function exibirLivrosTela (livros) {
     elementoLivros.innerHTML = ''
     livros.forEach(element => {
+        let disponibilidade = element.quantidade > 0 ? 'livro_imagens' : 'livro_imagens indisponivel'
         elementoLivros.innerHTML += `
          <div class="livro">
-        <img class="livro__imagens" src="${element.imagem}" alt="${element.alt}" />
+        <img class="${disponibilidade}" src="${element.imagem}" alt="${element.alt}" />
         <h2 class="livro__titulo">
          ${element.titulo}
         </h2>
