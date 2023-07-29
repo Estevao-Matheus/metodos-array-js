@@ -1,6 +1,7 @@
 const elementoLivros = document.getElementById('livros');
 
 function exibirLivrosTela (livros) {
+    elementoLivros.innerHTML = ''
     livros.forEach(element => {
         elementoLivros.innerHTML += `
          <div class="livro">
