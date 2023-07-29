@@ -1,6 +1,8 @@
 const elementoLivros = document.getElementById('livros');
+const elementoValorTotalDispionivel = document.getElementById('valor_total_livros_disponiveis')
 
 function exibirLivrosTela (livros) {
+    elementoValorTotalDispionivel.innerHTML = ''
     elementoLivros.innerHTML = ''
     livros.forEach(element => {
         let disponibilidade = element.quantidade > 0 ? 'livro_imagens' : 'livro_imagens indisponivel'
